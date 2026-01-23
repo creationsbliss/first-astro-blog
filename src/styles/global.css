@@ -21,11 +21,23 @@ h1 {
 }
 
 /* nav styles */
+.menu {
+  background-color: #0d0950;
+  border: none;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 5px 10px;
+}
 
 .nav-links {
   width: 100%;
   display: none;
   margin: 0;
+}
+
+.nav-links[data-open="true"] {
+  display: block;
 }
 
 .nav-links a {
@@ -56,5 +68,9 @@ h1 {
   .nav-links a {
     display: inline-block;
     padding: 15px 20px;
+  }
+
+  .menu {
+    display: none;
   }
 }
