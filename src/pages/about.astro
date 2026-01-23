@@ -1,7 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "../styles/global.css";
-import Navigation from "../components/Navigation.astro";
+import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
 
 const pageTitle = "About Me";
@@ -21,7 +21,7 @@ const goal = 3;
 ---
 
 <Layout>
-  <Navigation />
+  <Header />
 
   <h1>{pageTitle}</h1>
   <h2>... and my new Astro site!</h2>
@@ -37,6 +37,7 @@ const goal = 3;
   </p>
 
   <p>Here are a few facts about me:</p>
+
   <ul>
     <li>My name is {identity.firstName}.</li>
     <li>I live in {identity.country} and I work as a {identity.occupation}.</li>
@@ -48,7 +49,9 @@ const goal = 3;
       )
     }
   </ul>
+
   <p>My skills are:</p>
+
   <ul>
     {skills.map((skill) => <li>{skill}</li>)}
   </ul>
