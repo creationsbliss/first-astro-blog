@@ -1,14 +1,13 @@
-document.addEventListener("DOMContentLoaded", () => {
-  const menuButton = document.querySelector(".menu");
-  const menuList = document.querySelector("#main-menu");
+// Runs ONLY in the browser
+const menuButton = document.querySelector(".menu");
+const menuLinks = document.querySelector("#main-menu");
 
-  if (!menuButton || !menuList) return;
-
+if (menuButton && menuLinks) {
   menuButton.addEventListener("click", () => {
-    const isExpanded = menuButton.getAttribute("aria-expanded") === "true";
+    const isOpen = menuButton.getAttribute("aria-expanded") === "true";
 
-    menuButton.setAttribute("aria-expanded", String(!isExpanded));
+    menuButton.setAttribute("aria-expanded", String(!isOpen));
 
-    menuList.setAttribute("data-open", String(!isExpanded));
+    menuLinks.setAttribute("data-open", String(!isOpen));
   });
-});
+}
